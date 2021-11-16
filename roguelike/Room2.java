@@ -5,7 +5,7 @@
 import java.util.ArrayList;
 import ansi_terminal.*;
 
-public class Room {
+public class Room2 {
     // the grid holds the room geometry
     private String[] grid;
 
@@ -13,7 +13,7 @@ public class Room {
     private int rows;
     private int cols;
 
-    public Room() {
+    public Room2() {
         // this initializes the room to one specific space
         rows = 25;
         cols = 58;
