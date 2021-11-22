@@ -2,7 +2,7 @@
 // this class contains a static method for creating items randomly
 
 import java.util.Random;
-import java,util.ArrayList;
+import java.util.ArrayList;
 
 public class ItemGenerator 
 {
