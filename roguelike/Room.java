@@ -4,56 +4,77 @@
 
 import java.util.ArrayList;
 import ansi_terminal.*;
-
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
 public class Room {
     // the grid holds the room geometry
     private String[] grid;
+    //private String[] grid2;
+    //private String[] grid3;
 
     // the size of the room
     private int rows;
     private int cols;
+    //added private string name (for different testing puposes)
+    private String name;
 
-    public Room() {
+    public Room(File file, String roomName) {
         // this initializes the room to one specific space
         rows = 30;
         cols = 60;
+	this.name = roomName;
 
         // the actual room geometry
         // the i cells refer to where an item should be placed at
-        grid  = new String[] {
-            "##################                ######################    ",
-            "##              ##                ##      i           ##    ",
-            "##  @           ###########       ##        *         ##    ",
-            "##                       ##       ##                  ##    ",
-            "##              #######  ##       ##################  ##    ",
-            "##              ##   ##  ##                       ##  ##    ",
-            "##################   ##  ##################       ##  ##    ",
-            "                     ##                  ##       ##  ##    ",
-            "                     ##   *  i           ##       ##  ##    ",
-            "                     ##                  ##       ##  ##    ",
-            "                     ##############  ######       ##  ##    ",
-            "                                 ##  ##           ##  ##    ",
-            "                                 ##  ##           ##  ##    ",
-            "                       ############  ###############  ######",
-            "                       ##                                 ##",
-            "                       ##                                 ##",
-            "    #####################                  *              ##",
-            "    ##                                                    ##",
-            "    ##  #################                                 ##",
-            "    ##  ##             ##                                 ##",
-            "    ##  ##             #################  ##################",
-            "    ##  ##                            ##  ##                ",
-            "    ##  ##                            ##  ##                ",
-            "    ##  ##                       #######  #######           ",
-            "    ##  ##                       ##            ##           ",
-            "######  ####                     ##  i  *      ##           ",
-            "##        ##                     ##            ##           ",
-            "## i  *   ##                     ################           ",
-            "##        ##                                                ",
-            "############                                                "
-        };
-    }
+	try {	
+		//File file = new File(file)//("Room1.txt");
+		Scanner in = new Scanner (file);
+		rows = in.nextInt();
+		cols = in.nextInt();
+		in.nextLine();
+		grid = new String[rows];
+		System.out.println("\n\r");
+		for (int i=0; i<rows; i++) {
+			String L = in.nextLine();
+			grid[i] = L;
+			System.out.print(L);
+			System.out.print("\n\r");
 
+		}
+	// made some changes and also tried a few different things	
+		/*File file2 = new File ("Room2.txt");
+		Scanner in2 = new Scanner (file2);
+		rows= in2.nextInt();
+		cols=in2.nextInt();
+		in.nextLine();
+		grid2 = new String[rows];
+		System.out.println("\n\r");
+		for (int i=0; i<rows;i++) {
+			String L1 = in2.nextLine();
+			grid[i]=L1;
+			System.out.print(L1);
+			System.out.print("\n\r");
+		}
+		File file3 = new File("Room3.txt");
+		Scanner in3 = new Scanner(file3);
+		rows = in3.nextInt();
+		cols = in3.nextInt();
+		in3.nextLine();
+		grid3 = new String[rows];
+		System.out.println("\n\r");
+		for(int i=0; i<rows; i++) {
+			String L3 = in3.nextLine();
+			grid[i]=L3;
+			System.out.print(L3);
+			System.out.print("\n\r");
+    		}*/
+	}
+		catch (FileNotFoundException e) {
+			System.out.println("File not found");
+		}	
+    	}
+    
     // returns the player's strting location in this room
     public Position getPlayerStart() {
         for (int row = 0; row < rows; row++) {
@@ -126,6 +147,14 @@ public class Room {
     // returns if a given cell in the map is walkable or not
     public boolean canGo(int row, int col) {
         return grid[row].charAt(col) != '#';
+    }
+//added getGrid
+    public String[] getGrid(){
+	return grid;
+    }
+//added getName
+    public String getName(){
+	return this.name;
     }
 }
 
