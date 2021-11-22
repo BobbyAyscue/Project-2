@@ -9,7 +9,7 @@ public class ItemGenerator
 	//itemcreation = (ItemClass, weight, value, strength, name)
 
 	static ArrayList<Item> itemSet = new ArrayList<Item>();
-	public static Item generate() 
+	public  Item generate() 
 	{
 
 		// TODO: replace this with your own code!
@@ -42,10 +42,14 @@ public class ItemGenerator
 		itemSet.add(other3);
 
 		Collections.shuffle(itemSet);
+
 		public static Item generate () //shuffles the loot table and returns the top value.
 		{
 			Collections.shuffle(itemSet);
 			return itemSet.get(0);
 		}
+
+
 	}
-}
+
+
