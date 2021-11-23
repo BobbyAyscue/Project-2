@@ -28,6 +28,7 @@ public class Game {
                          "Equip weapon: w",
                          "Equip armor: a",
 			 "Save the game: 0", //added command for saving
+			 "Load saved game: 9"//added command for loading game
                          "Quit: q"
         };
         Terminal.setForeground(Color.GREEN);
@@ -90,6 +91,12 @@ public class Game {
 	out.writeObject(getHealth());
 	out.close();
 	}
+	private void load() {
+	FileInputStream fileIn = new FileOutputStream("Save.txt");
+	ObjectInputStream in = new ObjectInputStream(fileIn);
+	in.readObject();
+	in.close();
+	}
 
     // handle the key which was read - return false if we quit the game
     private boolean handleKey(Key key) {
@@ -128,6 +135,9 @@ public class Game {
                 break;
 	    case 0: //case made in order to save the game
 		save();
+		break;
+	    case 9:
+		load();
 		break;
 
             // and finally the quit command
