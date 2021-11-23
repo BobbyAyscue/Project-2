@@ -86,7 +86,8 @@ public class Game {
 	ObjectOutputStream out = new ObjectOutputSteam(fileOut);
 	out.writeObject(getInventory());
 	out.writeObject(getRow());
-	our.writeObject(getCol());
+	out.writeObject(getCol());
+	out.writeObject(getHealth());
 	out.close();
 	}
 
