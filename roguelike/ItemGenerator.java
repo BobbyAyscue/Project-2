@@ -2,7 +2,7 @@
 // this class contains a static method for creating items randomly
 
 import java.util.Random;
-import java,util.ArrayList;
+import java.util.ArrayList;
 
 public class ItemGenerator 
 {
@@ -42,7 +42,7 @@ public class ItemGenerator
 		itemSet.add(other3);
 
 		Collections.shuffle(itemSet);
-		public static Item generate () //shuffles the loot table and returns the top value.
+		public static Item generate() //shuffles the loot table and returns the top value.
 		{
 			Collections.shuffle(itemSet);
 			return itemSet.get(0);
