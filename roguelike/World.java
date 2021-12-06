@@ -1,4 +1,10 @@
 //In the world class I tried multiple things and wrote as much as I could that seemed would work. I setup a way for stoaring the rooms in here and also dealing with where the player is at and shifting from each room. I tried as best as I could here.
+/**
+ *The world class is designed to get the room files and connect each room
+ *Each room is assigned to its own private variables Room1, Room2, and Room3
+ *currentRoom is also its private variable to say which room you are currently in set equal
+ *to room1.
+ */
 import java.io.File;
 public class World {
 	private currentRoom;
@@ -12,7 +18,12 @@ public class World {
 		currentRoom = room1;
 	
 	}
-	//are on a "r", then change rooms
+	//if on a "r" then change rooms
+	/**
+	 *@param postion is where the player is located
+	 *The checkDoor method is deisgned to say that if the player is on said postion
+	 *change to that room.
+	 */
 	public checkDoor(Position position) {
 		
 		if(currentRoom.getName().equals("Room1") && position.getRow() == 21 &&

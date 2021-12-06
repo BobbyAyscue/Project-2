@@ -2,7 +2,9 @@
 // this class contains a static method for creating items randomly
 
 import java.util.Random;
-
+/**
+ *The ItemGenerator test is the creation of items that are generated to the player
+ */
 public class ItemGenerator 
 {
 	public static Item generate() 
