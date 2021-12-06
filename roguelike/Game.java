@@ -28,7 +28,7 @@ public class Game {
                          "Equip weapon: w",
                          "Equip armor: a",
 			 "Save the game: 0", //added command for saving
-			 "Load saved game: 9"//added command for loading game
+			 "Load saved game: 9",//added command for loading game
                          "Quit: q"
         };
         Terminal.setForeground(Color.GREEN);
