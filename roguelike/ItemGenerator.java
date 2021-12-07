@@ -21,17 +21,7 @@ public class ItemGenerator
 
 		return new Item(ItemType.Other, "Mace", 15, 7, 1);
 
-		return new Item(ItemType.Other, "Vase", 10, 2, 0);
-		
 
-}
 
-		Collections.shuffle(itemSet);
-		public static Item generate() //shuffles the loot table and returns the top value.
-		{
-			Collections.shuffle(itemSet);
-			return itemSet.get(0);
-		}
 	}
 }
-
