@@ -7,7 +7,7 @@
  */
 import java.io.File;
 public class World {
-	private currentRoom;
+	private Room currentRoom;
 	private Room room1;
 	private Room room2;
 	private Room room3;
