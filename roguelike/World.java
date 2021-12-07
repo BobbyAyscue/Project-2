@@ -24,7 +24,7 @@ public class World {
 	 *The checkDoor method is deisgned to say that if the player is on said postion
 	 *change to that room.
 	 */
-	public checkDoor(Position position) {
+	public void checkDoor(Position position) {
 		
 		if(currentRoom.getName().equals("Room1") && position.getRow() == 21 &&
 			       	position.getCol() == 60){
