@@ -21,7 +21,7 @@ public class ItemGenerator
 
 
 
-		return new Item(ItemType.Other, "Mace", 15, 7, 1)
+		return new Item(ItemType.Other, "Mace", 15, 7, 1);
 		return new Item(ItemType.Other, "Vase", 10, 2, 0);
 		return new Item(ItemType.Other, "Torch", 6, 5, 3);
 		return new Item(ItemType.Other, "Bomb", 17, 10, 8);
