@@ -2,50 +2,37 @@
 // this class contains a static method for creating items randomly
 
 import java.util.Random;
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+>>>>>>> 8c1c5b9a9eda0d254808125846f02e9f67f13758
 
 public class ItemGenerator 
 {
-	//itemcreation = (ItemClass, weight, value, strength, name)
-
-	static ArrayList<Item> itemSet = new ArrayList<Item>();
 	public static Item generate() 
 	{
-
 		// TODO: replace this with your own code!
 
-		Random rand = new Random();
 
 
+		return new Item(ItemType.Other, "Mace", 15, 7, 1);
+		return new Item(ItemType.Other, "Vase", 10, 2, 0);
+		return new Item(ItemType.Other, "Torch", 6, 5, 3);
+		return new Item(ItemType.Other, "Bomb", 17, 10, 8);
+		return new Item(ItemType.Other, "Dagger", 8, 6, 3);
+		return new Item(ItemType.Other, "Mallet", 9, 4, 4);
+		return new Item(ItemType.Other, "Fist", 3, 1, 0);
+		return new Item(ItemType.Other, "Plank", 6, 3, 0);
 
-		Item sword1=new Item(ItemClass.Weapon, 8,28,2,"Oversized butter knife");
-		Item sword2=new Item(ItemClass.Weapon, 14,25,3,"Lead Club");
-		Item sword3=new Item(ItemClass.Weapon, 4,30,4,"Lightweight Cavalry Sword, or a LIGHT, SABER. haha");
 
-
-		Item armor1=new Item(ItemClass.Armor,2,6,1,"Skimpy Leathers");
-		Item armor2=new Item(ItemClass.Armor,8,30,3, "Lorica Segmentata");
-		Item armor3=new Item(ItemClass.Armor,20,50,5, "Tungsten Greaves");
-
-		Item other1=new Item(ItemClass.Other,2,1,0,"Dust! I hate dust!");
-		Item other2=new Item(ItemClass.Other,1,10,0, "Bone Figure");
-		Item other3=new Item(ItemClass.Other,20,100,0, "Inconveniently Large Gold Chunk");
-
-		itemSet.add(sword1);
-		itemSet.add(sword2);
-		itemSet.add(sword3);
-		itemSet.add(armor1);
-		itemSet.add(armor2);
-		itemSet.add(armor3);
-		itemSet.add(other1);
-		itemSet.add(other2);
-		itemSet.add(other3);
-
+<<<<<<< HEAD
 		Collections.shuffle(itemSet);
 		public static Item generate() //shuffles the loot table and returns the top value.
 		{
 			Collections.shuffle(itemSet);
 			return itemSet.get(0);
 		}
+=======
+>>>>>>> 8c1c5b9a9eda0d254808125846f02e9f67f13758
 	}
 }
