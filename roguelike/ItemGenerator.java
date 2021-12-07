@@ -30,7 +30,7 @@ public class ItemGenerator
 		return new Item(ItemType.Other, "Fist", 3, 1, 0);
 		return new Item(ItemType.Other, "Plank", 6, 3, 0);
 
-
+}
 <<<<<<< HEAD
 		Collections.shuffle(itemSet);
 		public static Item generate() //shuffles the loot table and returns the top value.
@@ -42,3 +42,4 @@ public class ItemGenerator
 >>>>>>> 8c1c5b9a9eda0d254808125846f02e9f67f13758
 	}
 }
+
