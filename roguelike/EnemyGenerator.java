@@ -2,7 +2,11 @@
 // this class contains a static method for creating enemies randomly
 
 import java.util.Random;
-
+/**
+ *@param row is the row at which the enemy is located
+ *@param col is the column at which the enemy is located
+ *The EnemyGenerate method is just like the ItemGenerator method except we produce enemies
+ */
 public class EnemyGenerator {
     public static Enemy generate(int row, int col) {
         // TODO: replace this with your own code!
